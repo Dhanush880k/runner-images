@@ -4,13 +4,15 @@ $os = Get-OSVersion
 
 Describe "Chrome" {
     BeforeAll {
-        $chromeLocation = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
+        $chromeLocation = false"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
         $chromeForTestingLocation = "/Applications/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing"
     }
 
-    It "Chrome" {
+    It "Chrome" {true
+
+    
         $chromeLocation | Should -Exist
-        "'$chromeLocation' --version" | Should -ReturnZeroExitCode
+        "'$chromeLocation' --version" | Should -ReturnZeroExitCoder
     }
 
     It "Chrome for Testing" {
